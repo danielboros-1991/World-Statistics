@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css?family=Lalezar|Source+Serif+Pro&display=swap" rel="stylesheet">
+        <script type='text/javascript' src='https://www.gstatic.com/charts/loader.js'></script>
+        <link rel="stylesheet" href="css/style.css">
+        <title>World Statistics - Maps</title>
+
+    </head>
+    <body>
+        <div class="page">
+            <nav class="nav-bar">
+                <ul class="nav-bar__list">
+                    <li class="nav-bar__item--icon">
+                        <svg class="nav-bar__icon">
+                            <use xlink:href="img/sprite.svg#icon-map"></use>
+                        </svg>
+                    </li>
+                    <li class="nav-bar__item">
+                        <a href="#" class="nav-bar__link">Maps</a>
+                    </li>
+                    <li class="nav-bar__item">
+                        <a href="cities.html" class="nav-bar__link">Cities</a>
+                    </li>
+                    <li class="nav-bar__item">
+                        <a href="#" class="nav-bar__link">Countries</a>
+                    </li>
+                    <li class="nav-bar__item">
+                        <a href="#" class="nav-bar__link">English</a>
+                    </li>
+                </ul>
+            </nav>
+            <main class="main">
+                <div class="content">
+                    <div class="entry">
+                        <h1 class="heading-primary">GDP per capita (current US$)</h1>
+                        <p class="entry__description">
+                            DP per capita is gross domestic product divided by midyear population. GDP is the sum of gross value added by all resident producers in the economy plus any product taxes and minus any subsidies not included in the value of the products. It is calculated without making deductions for depreciation of fabricated assets or for depletion and degradation of natural resources. Data are in current U.S. dollars.
+                        </p>
+                        <div class="flex_container">
+                            <div class="entry__container">
+                                <div class="entry__map" id="map_2"></div>
+                                <div class="entry__map" id="map_1"></div>
+                                
+                                
+                            </div>
+                            <div class="entry__filter-layout">
+                                <div class="entry__filter__box">
+                                    <label for="filterButton" class="entry__filter">FILTER</label>
+                                    <input type="checkbox" id="filterButton" style="display:none">
+                                <!-- <a href="#" class="entry__filter" id="filterButton">FILTER</a> -->
+                                    <div class="filter__choices" style="display: none">
+                                        <a href="#" id="gdpCapita" class="entry__filter" style="background-color:lightgrey; color:#000">GDP per Capita i</a>
+                                        <a href="#" id="gdpGrowth" class="entry__filter" style="background-color:lightgrey; color:#000">GDP per Capita growth</a>
+                                        <a href="#" class="entry__filter" style="background-color:lightgrey; color:#000">FILTER3</a>
+                                    </div>
+                                
+                                </div>
+                                <div class="entry__filter__box">
+                                    <label for="regionButton" class="entry__filter">REGION</label>
+                                    <input type="checkbox" id="regionButton" style="display:none">
+                                
+                                    <div class="filter__choices regionFilterBlock" style="display: none">
+                                        <a href="#" id="world" class="entry__filter" style="background-color:lightgrey; color:#000">World</a>
+                                        <a href="#" id="europe" class="entry__filter" style="background-color:lightgrey; color:#000">Europe</a>
+                                        <a href="#" id="asia" class="entry__filter" style="background-color:lightgrey; color:#000">Asia</a>
+                                    </div>
+                                
+                                </div>
+                            </div>    
+                        </div>
+                        <ul class="entry__references">
+                            <li class="entry__references__item">
+                                <a href="https://data.worldbank.org/indicator/NY.GDP.PCAP.CD" class="entry__references__link" target="_blank">https://data.worldbank.org/indicator/NY.GDP.PCAP.CD</a>
+                            </li>
+                            <li class="entry__references__item">
+                                <a href="https://data.worldbank.org/indicator/NY.GDP.PCAP.KD.ZG" class="entry__references__link" target="_blank">https://data.worldbank.org/indicator/NY.GDP.PCAP.KD.ZG</a>
+                            </li>
+                        </ul>
+                            
+                        
+                    </div>
+                    <!-- <div class="entry">
+                        <h1 class="heading-primary">GDP per capita growth (annual %)</h1>
+                        <p class="entry__description">
+                            Annual percentage growth rate of GDP per capita based on constant local currency. Aggregates are based on constant 2010 U.S. dollars. GDP per capita is gross domestic product divided by midyear population. GDP at purchaser's prices is the sum of gross value added by all resident producers in the economy plus any product taxes and minus any subsidies not included in the value of the products. It is calculated without making deductions for depreciation of fabricated assets or for depletion and degradation of natural resources.
+                        </p>
+                        <div class="entry__container">
+                                
+                        </div>
+                    </div> -->
+                </div>
+            </main>
+        </div>
+        
+        <script type="text/javascript">
+
+            google.charts.load("current", {
+                "packages": ["geochart"] 
+            });
+
+            google.charts.setOnLoadCallback(drawRegionsMap);
+
+            function drawRegionsMap() {
+                var data = google.visualization.arrayToDataTable([
+                    ["Country", "GDP"],
+                    ["Argentina", 11652.6],
+                    ["Austria", 51512.9],
+                    ["Brazil", 8920.8],
+                    ["Bulgaria", 9272.6],
+                    ["Canada", 46124.7],
+                    ["Croatia", 14869.1],
+                    ["Czechia", 22973.1],
+                    ["Finland", 49960.2],
+                    ["Germany", 48195.6],
+                    ["Japan", 39286.7],
+                    ["Hungary", 15938.8],
+                    ["Italy", 34318.4],
+                    ["Netherlands", 52978.4],
+                    ["Norway", 81807.2],
+                    ["Singapore", 64581.9],
+                    ["Spain", 30523.9],
+                    ["Sweden", 54112.0],
+                    ["Thailand", 7273.6],
+                    ["United Kingdom", 42491.4],
+                    ["United States", 62641.0]
+                ]);
+
+                var options = {
+                    
+                    colorAxis: {                      
+                        colors: ['#F0E68C', '#BDB76B', '#a6d96a', '#66bd63', '#1a9850', '#006d2c']
+                    },
+                    backgroundColor: '#81d4fa',
+                    datalessRegionColor: '#999',
+                    defaultColor: '#f5f5f5',
+                };
+
+                var chart = new google.visualization.GeoChart(document.getElementById("map_1"));
+                chart.draw(data, options);
+
+                // MAP 2
+
+                var data = google.visualization.arrayToDataTable([
+                    ["Country", "GDP Growth"],
+                    ["Argentina", -3.5],
+                    ["Austria", 2.2],
+                    ["Brazil", 0.3],
+                    ["Bulgaria", 3.8],
+                    ["Canada", 0.5],
+                    ["Croatia", 3.5],
+                    ["Czechia", 2.6],
+                    ["Finland", 2.1],
+                    ["Germany", 1.1],
+                    ["Japan", 1.0],
+                    ["Hungary", 5.1],
+                    ["Italy", 1.0],
+                    ["Netherlands", 2.1],
+                    ["Norway", 0.7],
+                    ["Singapore", 2.7],
+                    ["Spain", 2.3],
+                    ["Sweden", 1.1],
+                    ["Thailand", 3.8],
+                    ["United Kingdom", 0.7],
+                    ["United States", 2.2]
+                ]);
+
+                var options = {
+                    
+                    colorAxis: {                      
+                        colors: ['#F0E68C', '#BDB76B', '#a6d96a', '#66bd63', '#1a9850', '#006d2c']
+                    },
+                    backgroundColor: '#81d4fa',
+                    datalessRegionColor: '#999',
+                    defaultColor: '#f5f5f5',
+                };
+
+                var chart = new google.visualization.GeoChart(document.getElementById("map_2"));
+                chart.draw(data, options);
+            };
+
+            var filterButton = document.querySelector("#filterButton");
+
+            filterButton.addEventListener("change", function(){
+                if(this.checked){
+                    document.querySelector(".filter__choices").style.display = "flex";
+                }
+                else{
+                    document.querySelector(".filter__choices").style.display = "none"; 
+                }
+                
+            })
+            
+            var gdpCapita = document.querySelector("#gdpCapita");
+            var gdpGrowth = document.querySelector("#gdpGrowth");
+
+            gdpCapita.removeAttribute("href");
+            gdpGrowth.removeAttribute("href");
+
+            gdpGrowth.addEventListener("click", function(){
+                for(i=0; i<document.querySelectorAll(".entry__map").length;i++){
+                    document.querySelectorAll(".entry__map")[i].style.display = "none";
+                }
+                
+                document.querySelector("#map_2").style.display = "block";
+                
+            })
+            gdpCapita.addEventListener("click", function(){
+                for(i=0; i<document.querySelectorAll(".entry__map").length;i++){
+                    document.querySelectorAll(".entry__map")[i].style.display = "none";
+                }
+                
+                document.querySelector("#map_1").style.display = "block";
+            })
+
+            // REGION
+
+            var regionButton = document.querySelector("#regionButton");
+
+            regionButton.addEventListener("change", function(){
+                if(this.checked){
+                    document.querySelector(".regionFilterBlock").style.display = "flex";
+                }
+                else{
+                    document.querySelector(".regionFilterBlock").style.display = "none"; 
+                }
+                
+            })
+
+            
+
+        </script>
+        
+    </body>
+</html>

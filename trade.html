@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css?family=Lalezar|Source+Serif+Pro&display=swap" rel="stylesheet">
+        <script type='text/javascript' src='https://www.gstatic.com/charts/loader.js'></script>
+        <link rel="stylesheet" href="css/style.css">
+        <title>World Statistics - Trade</title>
+
+    </head>
+    <body>
+        <div class="page">
+            <nav class="nav-bar">
+                <ul class="nav-bar__list">
+                    <li class="nav-bar__item--icon">
+                        <svg class="nav-bar__icon">
+                            <use xlink:href="img/sprite.svg#icon-map"></use>
+                        </svg>
+                    </li>
+                    <li class="nav-bar__item">
+                        <a href="#" class="nav-bar__link">Maps</a>
+                    </li>
+                    <li class="nav-bar__item">
+                        <a href="cities.html" class="nav-bar__link">Cities</a>
+                    </li>
+                    <li class="nav-bar__item">
+                        <a href="#" class="nav-bar__link">Countries</a>
+                    </li>
+                    <li class="nav-bar__item">
+                        <a href="#" class="nav-bar__link">English</a>
+                    </li>
+                </ul>
+            </nav>
+            <main class="main">
+                <div class="content">
+                    <div class="entry">
+                        <h1 class="heading-primary">Exporte (in 1000 Euro)</h1>
+                        <p class="entry__description">
+                            Österreichs Aussenhandel nach der Wirtschaftskammer Österreich.
+                        </p>
+                        <div class="flex_container">                           
+                           <div class="entry__container">
+                               <div class="entry__map" id="map_1"></div>
+                           </div>     
+                        </div>
+                        <ul class="entry__references">
+                            <li class="entry__references__item">
+                                <a href="http://wko.at/statistik/Extranet/AHstat/AH_12_2018e_Bericht.pdf" class="entry__references__link" target="_blank">http://wko.at/statistik/Extranet/AHstat/AH_12_2018e_Bericht.pdf</a>
+                            </li>
+                        </ul>    
+                        
+                    </div>
+
+                    <div class="entry">
+                        <h1 class="heading-primary">Exporte (in 1000 Euro)</h1>
+                        <p class="entry__description">
+                            Deutschlands Aussenhandel nach dem Statistischen Bundesamt.
+                        </p>
+                        <div class="flex_container">                           
+                           <div class="entry__container">
+                               <div class="entry__map" id="map_2"></div>
+                           </div>     
+                        </div>
+                        <ul class="entry__references">
+                            <li class="entry__references__item">
+                                <a href="https://www.bmwi.de/Redaktion/DE/Publikationen/Aussenwirtschaft/fakten-zum-deuschen-aussenhandel.pdf?__blob=publicationFile&v=30" class="entry__references__link" target="_blank">https://www.bmwi.de/Redaktion/DE/Publikationen/Aussenwirtschaft/fakten-zum-deuschen-aussenhandel.pdf?__blob=publicationFile&v=30</a>
+                            </li>
+                        </ul>
+                            
+                        
+                    </div>
+                   
+                </div>
+            </main>
+        </div>
+        
+        <script type="text/javascript">
+
+            google.charts.load("current", {
+                "packages": ["treemap"] 
+            });
+
+            google.charts.setOnLoadCallback(drawRegionsMap);
+
+            function drawRegionsMap() {
+
+                var data = google.visualization.arrayToDataTable([
+                    ["Location", "Parent", "Exporte"],
+                    ["Global", null, 150070984],
+                    ["Europe", "Global", 118528257],
+                    ["North America", "Global", 14767961],
+                    ["Central and South America", "Global", 0],
+                    ["Africa", "Global", 1823754],
+                    ["Asia", "Global", 13543020 ],
+                    ["Australia and Oceania", "Global", 1347293],
+                    ["Germany", "Europe", 45235259],
+                    ["Italy", "Europe", 9761904],
+                    ["Switzerland", "Europe", 7013134],
+                    ["France", "Europe", 6411340],
+                    ["Czechia", "Europe", 5666206],
+                    ["Hungary", "Europe", 5114446],
+                    ["Poland", "Europe", 4779466],
+                    ["Great Britain", "Europe", 4198042],
+                    ["Slovakia", "Europe", 3185286],
+                    ["Slovenia", "Europe", 3101635],
+                    ["Netherlands", "Europe", 2907087],
+                    ["Spain", "Europe", 2636557],
+                    ["Romania", "Europe", 2559624],
+                    ["Belgium", "Europe", 2121567],
+                    ["Russland", "Europe", 2104567],
+                    ["Sweden", "Europe", 1701148 ],
+                    ["Croatia", "Europe", 1320008],
+                    ["Denmark", "Europe", 743191],
+                    ["Bulgaria", "Europe", 734897],
+                    ["United States of America", "North America", 10601465],
+                    ["Canada", "North America", 1225649],
+                    ["Mexico", "Central and South America", 1270151],
+                    ["Brazil", "Central and South America", 832586],
+                    ["Chile", "Central and South America", 199221],
+                    ["Argentina", "Central and South America", 133633],
+                    ["Columbia", "Central and South America", 105263],
+                    ["China", "Asia", 4055487],
+                    ["Japan", "Asia", 1529406],
+                    ["South Korea", "Asia", 1328256],
+                    ["Turkey", "Asia", 1320778],
+                    ["India", "Asia", 923529],
+                    ["Arab Emirates", "Asia", 554140],
+                    ["Malaysia", "Asia", 539838],
+                    ["Hongkong", "Asia", 506467],
+                    ["Taiwan", "Asia", 499640],
+                    ["Singapore", "Asia", 416445],
+                    ["Israel", "Asia", 371991],
+                    ["Saudi-Arabia", "Asia", 343654],
+                    ["Thailand", "Asia", 278152],
+                    ["Iran", "Asia", 268273],
+                    ["Indonesia", "Asia", 231449],
+                    ["Vietnam", "Asia", 225673],
+                    ["Pakistan", "Asia", 171958],
+                    ["Australia", "Australia and Oceania", 1181266],
+                    ["New Zealand", "Australia and Oceania", 153664],
+                    ["South Africa", "Africa", 588140],
+                    ["Algeria", "Africa", 257506],
+                    ["Egypt", "Africa", 215949],
+                    ["Marocco", "Africa", 161743],
+                    ["Mali", "Africa", 120495]
+                    
+                ]);
+
+                var options = {
+                    
+                    minColor: "#013243",
+                    midColor: "#2c3e50",
+                    maxColor: "#24252a",
+                    fontSize: 16,
+                    headerHeight: 15,
+                    fontColor: 'white',
+                    fontFamily: 'Source Serif Pro',
+                    showScale: false,
+                    // generateTooltip: showFullTooltip
+                };
+
+                var chart = new google.visualization.TreeMap(document.getElementById("map_1"));
+                chart.draw(data, options);
+
+                var data = google.visualization.arrayToDataTable([
+                    ["Location", "Parent", "Exporte"],
+                    ["Global", null, 0],
+                    ["Europe", "Global", 0],
+                    ["North America", "Global", 0],
+                    ["Central and South America", "Global", 0],
+                    ["Africa", "Global", 0],
+                    ["Asia", "Global", 0],
+                    ["Australia and Oceania", "Global", 0],
+                    ["United States of America", "North America", 111527913],
+                    ["France", "Europe", 105207984],
+                    ["China", "Asia", 86194693 ],
+                    ["Netherlands", "Europe", 85886364],
+                    ["Great Britain", "Europe", 84364798],
+                    ["Italy", "Europe", 65558343],
+                    ["Austria", "Europe", 62829967],
+                    ["Poland", "Europe", 59536585],                    
+                    ["Switzerland", "Europe", 54005935],
+                    ["Belgium", "Europe", 44268393],
+                    ["Spain", "Europe", 43042577],
+                    ["Czechia", "Europe", 41627050],
+                    ["Sweden", "Europe", 26625899],
+                    ["Russland", "Europe", 25856926],
+                    ["Hungary", "Europe", 24947203 ],
+                    ["Turkey", "Asia", 21457860],
+                    ["Japan", "Asia", 19532467],
+                    ["Denmark", "Europe", 18764372],
+                    ["South Korea", "Asia", 17473145],
+                    ["Romania", "Europe", 15146437],
+                    ["Slovakia", "Europe", 13391957],
+                    ["Mexico", "Central and South America", 12904513],
+                    ["Arab Emirates", "Asia", 11098801],
+                    ["Finland", "Europe", 11014352],
+                    ["India", "Asia", 10692823],
+                    ["Canada", "North America", 9674655],
+                    ["South Africa", "Africa", 9527662],
+                    ["Australia", "Australia and Oceania", 9434457],
+                    ["Portugal", "Europe", 8949499],
+                    ["Norwegen", "Europe", 8761911],
+                    ["Brazil", "Central and South America", 8457548],
+                    ["Taiwan", "Asia", 7680243],
+                    ["Irland", "Europe", 7412822],
+                    ["Singapore", "Asia", 6931155],
+                    ["Hongkong", "Asia", 6872813],
+                    ["Saudi-Arabia", "Asia", 6598253],
+                    ["Luxembourg", "Europe", 5773964],
+                    ["Slovenia", "Europe", 5270017],
+                    ["Greece", "Europe", 5224194],
+                    ["Malaysia", "Asia", 5024465],
+                    ["Thailand", "Asia", 4688901],
+                    ["Egypt", "Africa", 4450129]
+                    
+                ]);
+
+                var options = {
+                    
+                    minColor: "#013243",
+                    midColor: "#2c3e50",
+                    maxColor: "#24252a",
+                    fontSize: 16,
+                    headerHeight: 15,
+                    fontColor: 'white',
+                    fontFamily: 'Source Serif Pro',
+                    showScale: false
+                    // generateTooltip: showFullTooltip
+                };
+
+                var chart = new google.visualization.TreeMap(document.getElementById("map_2"));
+                chart.draw(data, options);
+
+            }
+
+            function showFullTooltip(row, size, value) {
+                return '<div style="background:#fd9; padding:10px; border-style:solid">' +
+                        '<span style="font-family:Courier"><b>' + data.getValue(row, 0) +
+                         '</b>: ' + data.getValue(row, 2) + " (x1000 Euro)" + ' </div>';
+            }
+
+                    
+            
+
+        </script>
+        
+    </body>
+</html>

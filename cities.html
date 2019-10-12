@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css?family=Lalezar|Source+Serif+Pro&display=swap" rel="stylesheet">
+        <script type='text/javascript' src='https://www.gstatic.com/charts/loader.js'></script>
+        <title>World Statistics - Cities</title>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+
+    <body>
+        
+            <div class="page">
+                <nav class="nav-bar">
+                    <ul class="nav-bar__list">
+                        <li class="nav-bar__item--icon">
+                            <svg class="nav-bar__icon">
+                                <use xlink:href="img/sprite.svg#icon-map"></use>
+                            </svg>
+                        </li>
+                        <li class="nav-bar__item">
+                            <a href="index.html" class="nav-bar__link">Maps</a>
+                        </li>
+                        <li class="nav-bar__item">
+                            <a href="#" class="nav-bar__link">Cities</a>
+                        </li>
+                        <li class="nav-bar__item">
+                            <a href="#" class="nav-bar__link">Countries</a>
+                        </li>
+                    </ul>
+                </nav>
+                    <main class="main">
+                        <div class="content">
+
+                            <div class="entry">
+                                <h1 class="heading-primary">Vienna</h1>
+                                <p class="entry__description">
+                                        Wien, die Hauptstadt Österreichs, liegt im Osten des Landes an der Donau. Ihr künstlerisches und intellektuelles Erbe wurde von Bewohnern wie Mozart, Beethoven und Sigmund Freud geprägt. Die Stadt ist auch bekannt für ihre kaiserlichen Paläste wie das Schloss Schönbrunn, die Sommerresidenz der Habsburger.
+                                </p>
+                                <div class="entry__container">
+
+                                        <div class="entry__map" id="chart_4"></div>          
+                                        
+                                        <div class="entry__map" id="chart_1"></div>
+                                                                                                                       
+                                </div> 
+                                <div class="entry__buttons">
+
+                                    <label for="number" class="btn">Anzahl</label>
+                                    <input class="entry__checkbox" type="radio" name="mode" id="number" checked>
+    
+                                    <label for="percent" class="btn">View percent</label>
+                                    <input class="entry__checkbox" type="radio" name="mode" id="percent">
+
+                                </div>
+                                <ul class="entry__references">
+                                    <li class="entry__references__item">
+                                        <a href="https://www.wien.gv.at/statistik/bevoelkerung/tabellen/bevoelkerung-herk-geschl-zr.html" class="entry__references__link" target="_blank">https://www.wien.gv.at/statistik/bevoelkerung/tabellen/bevoelkerung-herk-geschl-zr.html</a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="entry">
+                                <h1 class="heading-primary">Frankfurt</h1>
+                                <p class="entry__description">
+                                        Frankfurt am Main ist ein bedeutender Finanzplatz und Sitz der Europäischen Zentralbank. Im ehemaligen Wohnhaus Johann Wolfgang von Goethes, der hier auch geboren wurde, befindet sich heute ein Museum über den berühmten deutschen Dichter und Schriftsteller. Wie große Teile der übrigen Stadt wurde auch das Gebäude im 2. Weltkrieg beschädigt und später wieder aufgebaut. 
+                                </p>
+                                <div class="entry__container">
+
+                                        <div class="entry__map" id="chart_6"></div>
+                                        <div class="entry__map" id="chart_2"></div>                                                 
+                                                                                                                       
+                                </div> 
+                                <div class="entry__buttons">
+
+                                    <label for="numberFRA" class="btn">Anzahl</label>
+                                    <input class="entry__checkbox" type="radio" name="modeFRA" id="numberFRA" checked>
+    
+                                    <label for="percentFRA" class="btn">View percent</label>
+                                    <input class="entry__checkbox" type="radio" name="modeFRA" id="percentFRA">
+
+                                </div>
+                                <ul class="entry__references">
+                                    <li class="entry__references__item">
+                                        <a href="https://www.frankfurt.de/sixcms/media.php/678/JB2018_2_Bevoelkerung.pdf" class="entry__references__link" target="_blank">https://www.frankfurt.de/sixcms/media.php/678/JB2018_2_Bevoelkerung.pdf</a>
+                                    </li>
+                                    <li class="entry__references__item">
+                                        <a href="https://www.fr.de/frankfurt/spd-org26325/haelfte-frankfurter-migrationshintergrund-11078246.html" class="entry__references__link" target="_blank">https://www.fr.de/frankfurt/spd-org26325/haelfte-frankfurter-migrationshintergrund-11078246.htmlG</a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="entry">
+                                <h1 class="heading-primary">Berlin</h1>
+                                <p class="entry__description">
+                                    Berlin ist die Bundeshauptstadt der Bundesrepublik Deutschland und zugleich eines ihrer Länder. Die Stadt Berlin ist mit rund 3,65 Millionen Einwohnern die bevölkerungsreichste und mit 892 Quadratkilometern die flächengrößte Gemeinde Deutschlands. 
+                                </p>
+                                <div class="entry__container">
+
+                                        <div class="entry__map" id="chart_5"></div>
+                                        <div class="entry__map" id="chart_3"></div>                                                 
+                                                                                                                       
+                                </div> 
+                                <div class="entry__buttons">
+
+                                    <label for="numberBER" class="btn">Anzahl</label>
+                                    <input class="entry__checkbox" type="radio" name="modeBER" id="numberBER" checked>
+    
+                                    <label for="percentBER" class="btn">View percent</label>
+                                    <input class="entry__checkbox" type="radio" name="modeBER" id="percentBER">
+
+                                </div>
+                                <ul class="entry__references">
+                                    <li class="entry__references__item">
+                                        <a href="https://web.archive.org/web/20180304174256/https://www.statistik-berlin-brandenburg.de/publikationen/Stat_Berichte/2018/SB_A01-05-00_2017h02_BE.pdf" class="entry__references__link" target="_blank">https://web.archive.org/web/20180304174256/https://www.statistik-berlin-brandenburg.de/publikationen/Stat_Berichte/2018/SB_A01-05-00_2017h02_BE.pdf</a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            
+
+                             
+
+                            
+                        </div>
+                    </main>
+                </div>
+
+                <script type="text/javascript">
+
+                    google.charts.load("current", {
+                        "packages": ["corechart"]
+                    });
+
+                    google.charts.setOnLoadCallback(drawChart);
+
+                    function drawChart(){
+
+                        var data = google.visualization.arrayToDataTable([
+                            ["Migrationshintergrund", "Anzahl", { role: "style" }],
+                            ["Serbien", 101565, '#3EB9AD'],
+                            ["Türkei", 76658, '#EF767A'],
+                            ["Deutschland", 58233, '#EEB868'],
+                            ["Polen", 54153, '#456990'],
+                            ["Bosnien-Herzegowina", 40748, '#28536B'],
+                            ["Rumänien", 37610, '#812EDB'],
+                            ["Ungarn", 28283, '#85FFC7'],
+                            ["Kroatien", 27155, '#62a2d9'],
+                            ["Syrien", 24135, '#C52233'],
+                            ["Bulgarien", 19461, '#FDB927']
+                        ]);
+
+                        var options = {
+                            title:'Bevölkerung nach Migrationshintergrund',
+                            isStacked: false,
+                            legend: "none"
+                        };    
+
+                        var chart = new google.visualization.ColumnChart(document.getElementById("chart_1"));
+                        chart.draw(data, options);
+
+                        var data = google.visualization.arrayToDataTable([
+                            ["Migrationshintergrund", "Anzahl", { role: "style" }],
+                            ["Türkei", 44724, '#3EB9AD'],
+                            ["Polen", 30104, '#EF767A'],
+                            ["Marroko", 22449, '#28536B'],
+                            ["Italien", 20930, '#EEB868'],
+                            ["Kroatien", 20430, '#456990'],                       
+                            ["Rumänien", 14690, '#812EDB'],
+                            ["Russland", 11083, '#C52233'],
+                            ["Serbien", 9155, '#85FFC7'],
+                            ["Bulgarien", 8377, '#62a2d9'],                           
+                            ["Iran", 8301, '#FDB927']                           
+                        ]);
+
+                        var options = {
+                            title:'Bevölkerung nach Migrationshintergrund',
+                            isStacked: false,
+                            legend: "none"
+                            
+                        };    
+
+                        var chart = new google.visualization.ColumnChart(document.getElementById("chart_2"));
+                        chart.draw(data, options);
+
+                        var data = google.visualization.arrayToDataTable([
+                            ["Migrationshintergrund", "Anzahl", { role: "style" }],
+                            ["Türkei", 178223, '#3EB9AD'],
+                            ["Polen", 110340, '#EF767A'],
+                            ["Russland", 55873, '#EEB868'],
+                            ["Syrien", 37365, '#456990'],
+                            ["Italien", 36533, '#28536B'],                       
+                            ["Bulgarien", 32530, '#812EDB'],
+                            ["USA", 28796, '#85FFC7'],
+                            ["Libanon", 28663, '#62a2d9'],
+                            ["Vietnam", 26934, '#C52233'],
+                            ["Frankreich", 26681, '#FDB927']
+                        ]);
+
+                        var options = {
+                            title:'Bevölkerung nach Migrationshintergrund',
+                            isStacked: false,
+                            legend: "none"
+                            
+                        };    
+
+                        var chart = new google.visualization.ColumnChart(document.getElementById("chart_3"));
+                        chart.draw(data, options);
+
+                        var data = google.visualization.arrayToDataTable([
+                            ["Migrationshintergrund", "Anzahl", { role: "style" }],
+                            ["Österreich", 1129212, '#3EB9AD'],
+                            ["Serbien", 101565, '#3EB9AD'],
+                            ["Türkei", 76658, '#EF767A'],
+                            ["Deutschland", 58233, '#EEB868'],
+                            ["Polen", 54153, '#456990'],
+                            ["Bosnien-Herzegowina", 40748, '#28536B'],
+                            ["Rumänien", 37610, '#812EDB'],
+                            ["Ungarn", 28283, '#85FFC7'],
+                            ["Kroatien", 27155, '#62a2d9'],
+                            ["Syrien", 24135, '#C52233'],
+                            ["Bulgarien", 19461, '#FDB927'],
+                            ["Andere", 291563, '#3EB9AD']
+                        ]);
+
+                        var options = {
+                            title:'Wien',
+                            pieHole: 0.4
+                        };    
+
+                        var chart = new google.visualization.PieChart(document.getElementById("chart_4"));
+                        chart.draw(data, options);
+
+                        var data = google.visualization.arrayToDataTable([
+                            ["Migrationshintergrund", "Anzahl", { role: "style" }],
+                            ["Deutschland", 2504878 , '#3EB9AD'],
+                            ["Türkei", 178223, '#3EB9AD'],
+                            ["Polen", 110340, '#EF767A'],
+                            ["Russland", 55873, '#EEB868'],
+                            ["Syrien", 37365, '#456990'],
+                            ["Italien", 36533, '#28536B'],                       
+                            ["Bulgarien", 32530, '#812EDB'],
+                            ["USA", 28796, '#85FFC7'],
+                            ["Libanon", 28663, '#62a2d9'],
+                            ["Vietnam", 26934, '#C52233'],
+                            ["Frankreich", 26681, '#FDB927'],
+                            ["Andere", 645114, '#3EB9AD']
+                        ]);
+
+                        var options = {
+                            title:'Berlin',
+                            pieHole: 0.4
+                        };    
+
+                        var chart = new google.visualization.PieChart(document.getElementById("chart_5"));
+                        chart.draw(data, options);
+
+                        var data = google.visualization.arrayToDataTable([
+                            ["Migrationshintergrund", "Anzahl", { role: "style" }],
+                            ["Deutschland", 375046, '#3EB9AD'],
+                            ["Türkei", 44724, '#3EB9AD'],
+                            ["Polen", 30104, '#EF767A'],
+                            ["Marroko", 22449, '#28536B'],
+                            ["Italien", 20930, '#EEB868'],
+                            ["Kroatien", 20430, '#456990'],                       
+                            ["Rumänien", 14690, '#812EDB'],
+                            ["Russland", 11083, '#C52233'],
+                            ["Serbien", 9155, '#85FFC7'],
+                            ["Bulgarien", 8377, '#62a2d9'],                           
+                            ["Iran", 8301, '#FDB927'],
+                            ["Andere", 203248, '#3EB9AD']
+                        ]);
+
+                        var options = {
+                            title:'Frankfurt',
+                            pieHole: 0.4
+                        };    
+
+                        var chart = new google.visualization.PieChart(document.getElementById("chart_6"));
+                        chart.draw(data, options);
+
+                            
+
+
+                    }
+
+
+                
+                    // dataFrankfurt = [
+                    //     ["Migrationshintergrund", "Anzahl"]
+                    //     ["Türkei", 44724],
+                    //     ["Italien", 20930],
+                    //     ["Kroatien", 20430],
+                    //     ["Marroko", 16447],
+                    //     ["Polen", 30104],
+                    //     ["Rumänien", 14690],
+                    //     ["Serbien", 9155],
+                    //     ["Bulgarisch", 8377],
+                    //     ["Russland", 7870],
+                    //     ["Spanien", 7272]
+                    // ]
+
+                    // dataVienna = [
+                    //     ["Migrationshintergrund", "Anzahl"]
+                    //     ["Serbien", 101565],
+                    //     ["Türkei", 76658],
+                    //     ["Deutschland", 58233],
+                    //     ["Polen", 54153],
+                    //     ["Bosnien-Herzegowina", 40748],
+                    //     ["Rumänien", 37610],
+                    //     ["Ungarn", 28283],
+                    //     ["Kroatien", 27155],
+                    //     ["Syrien", 24135],
+                    //     ["Bulgarien", 19461]
+                    // ]
+
+                    var buttonAmount = document.querySelector("#number");
+                    var buttonPercent = document.querySelector("#percent");
+                    var chart1 = document.querySelector("#chart_1");
+                    var chart4 = document.querySelector("#chart_4");
+
+                    buttonAmount.addEventListener("click", function(){
+                        chart1.style.display = "block";
+                        document.querySelector("#chart_4").style.display = "none";
+                    });
+
+                    buttonPercent.addEventListener("click", function(){
+                        
+                        document.querySelector("#chart_1").style.display = "none";
+                        chart4.style.display = "block";
+                    });
+
+                    var buttonAmountFRA = document.querySelector("#numberFRA");
+                    var buttonPercentFRA = document.querySelector("#percentFRA"); 
+
+                    buttonAmountFRA.addEventListener("click", function(){
+                        document.querySelector("#chart_2").style.display = "block";
+                        document.querySelector("#chart_6").style.display = "none";
+                    });
+
+                    buttonPercentFRA.addEventListener("click", function(){
+                        
+                        document.querySelector("#chart_2").style.display = "none";
+                        document.querySelector("#chart_6").style.display = "block";
+                    });
+
+                    var buttonAmountBER = document.querySelector("#numberBER");
+                    var buttonPercentBER = document.querySelector("#percentBER"); 
+
+                    buttonAmountBER.addEventListener("click", function(){
+                        document.querySelector("#chart_3").style.display = "block";
+                        document.querySelector("#chart_5").style.display = "none";
+                    });
+
+                    buttonPercentBER.addEventListener("click", function(){
+                        
+                        document.querySelector("#chart_3").style.display = "none";
+                        document.querySelector("#chart_5").style.display = "block";
+                    });
+                    
+                </script>
+
+    </body>
+
+</html>

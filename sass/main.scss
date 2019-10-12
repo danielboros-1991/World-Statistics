@@ -1,0 +1,284 @@
+.page{
+    position: relative;
+}
+
+.nav-bar{
+    position: fixed;
+
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(52, 73, 94, 1);
+    font-family: "Lalezar", cursive;
+    font-size: 20px;
+    z-index: 1000;
+    padding: 0 150px 0 35px;
+
+    
+
+    &__list{
+        list-style: none;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    &__item{
+        padding: 20px;
+        transition: all .2s;
+
+        &--icon{
+            display: flex;
+            align-items: center;
+            margin-right: auto;
+
+        }
+        
+
+        &:hover{
+            background-color: rgba(25, 181, 254, 1);
+            
+            
+        }
+
+        &:hover .nav-bar__link{
+            transform: scale(1.2);
+        }
+
+        
+        
+    }
+
+    &__link,
+    &__link:link,
+    &__link:visited{
+        text-decoration: none;
+        text-transform: uppercase;
+        color: #fff;
+        letter-spacing: 1px;
+        display: inline-block;
+        
+    }
+
+    &__icon{
+        height: 30px;
+        width: 30px;
+        fill: #fff;
+    }
+}
+
+.main{
+    padding: 150px 0;
+    background-image: linear-gradient(to bottom,rgba(197, 239, 247, 1), rgba(25, 181, 254, 1));
+    
+}
+
+.content{
+    width: 80%;
+    box-shadow: 0 15px 40px rgba(black, .25);
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    
+    
+}
+
+
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+body{
+    box-sizing: border-box;
+}
+
+
+
+
+// ENTRY
+
+.entry{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Source Serif Pro', serif;
+
+    margin-bottom: 100px;
+
+    &__description{
+        margin-bottom: 20px;
+    }
+    
+
+    &__map{
+        height: 100%;
+        width: 100%;
+        margin-bottom: 30px;
+        background-color: lightgrey;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    &__buttons{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 20px;       
+    }
+
+    &__checkbox{
+        opacity: 0;
+    }
+
+   
+
+    &__container{
+        height: 500px;
+        width: 800px;
+        margin-bottom: 20px;
+        position: relative;
+    }
+
+    &__references{
+        margin-top: 10px;
+        list-style: none;
+        border-top: solid 1px rgba(52, 73, 94, 1);
+        width: 100%;
+
+        &__item{
+            padding-top: 10px;
+        }
+
+        &__link:visited,
+        &__link:link{
+            color: black;
+            font-family: 'Source Serif Pro', serif;
+            font-size: 12px;
+        }
+    }
+
+}
+
+// HEADERS
+
+.heading-primary{
+    margin-bottom: 20px;
+}
+
+
+// BUTTONS
+
+.btn{
+    
+    padding: 10px 20px;
+    color: #fff;
+    background-color: rgba(52, 73, 94, 1);
+    border-radius: 20px;
+    cursor: pointer;
+
+    &:hover{
+        transform: translateY(-2px);
+        box-shadow: 0 15px 40px rgba(black, .25);
+    }
+}
+
+
+
+
+
+.flex_container{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+// FILTER
+
+.entry__filter{
+    outline: none;
+    background-color: rgba(52, 73, 94, 1);
+    color: #fff;
+    width: 200px;
+    align-self: flex-start;
+    text-align: center;
+    text-decoration: none;
+    padding: 5px 30px;
+    cursor: pointer;
+
+    &__box{
+        display: flex;
+        flex-direction: column;
+    }
+    
+}
+
+.entry__filter__box{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.filter__choices{
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// The Checkbox-Hack only works when the content you want to toggle is a sibling of the input element.
+
+// #number{
+//     &:checked ~ #chart_4{
+
+//         display: none;
+        
+//     }
+
+// }
+
+// #percent{
+//     &:checked{
+//         display: none;
+//     }
+
+// }
+
