@@ -4,7 +4,7 @@
 
 .nav-bar{
     position: fixed;
-
+    height: 75px;
     top: 0;
     left: 0;
     width: 100%;
@@ -17,14 +17,17 @@
     
 
     &__list{
+        height: 100%;
         list-style: none;
         display: flex;
         justify-content: space-around;
     }
 
     &__item{
-        padding: 20px;
+        
         transition: all .2s;
+        display: flex;
+        flex-direction: column;
 
         &--icon{
             display: flex;
@@ -36,12 +39,15 @@
 
         &:hover{
             background-color: rgba(25, 181, 254, 1);
-            
-            
+                     
         }
 
         &:hover .nav-bar__link{
             transform: scale(1.2);
+        }
+
+        &:hover .dropdown{
+            display: block;
         }
 
         
@@ -51,11 +57,13 @@
     &__link,
     &__link:link,
     &__link:visited{
+        height: 100%;
         text-decoration: none;
         text-transform: uppercase;
         color: #fff;
         letter-spacing: 1px;
         display: inline-block;
+        padding: 20px;
         
     }
 
@@ -63,6 +71,29 @@
         height: 30px;
         width: 30px;
         fill: #fff;
+    }
+}
+
+.dropdown{
+    list-style: none;
+    background-color: rgba(52, 73, 94, 1);
+    width: 100%;
+    display: none;
+
+   
+    &__item{
+        padding: 10px;
+    }
+
+    &__item:hover{
+        cursor: pointer;
+        background-color: rgba(25, 181, 254, 1);
+    }
+
+    &__link:visited,
+    &__link:link{
+        text-decoration: none;
+        color: white;
     }
 }
 
@@ -167,7 +198,7 @@ body{
 // HEADERS
 
 .heading-primary{
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 
 
@@ -188,13 +219,11 @@ body{
 }
 
 
-
-
-
 .flex_container{
     display: flex;
     justify-content: space-evenly;
     width: 100%;
+    margin-top: 40px;
 }
 
 // FILTER
@@ -227,6 +256,50 @@ body{
     display: flex;
     flex-direction: column;
 }
+
+// CITY SEARCH TABLE
+
+.searchInput{
+    width: 300px;
+    padding: 10px 20px;
+    margin-bottom: 30px;
+}
+
+.table{
+    width: 100%;
+    font-size: 20px;
+    border: 1px solid grey;
+    margin-bottom: 30px;
+    border-collapse: collapse;
+
+    &__header{
+        color: white;
+        background-color: rgba(52, 73, 94, 1);
+        letter-spacing: 2px;
+    }
+
+    tr{       
+        border-bottom: 1px solid grey;
+    }
+
+    tr:hover{
+        color: white;
+        background-color: rgba(25, 181, 254, 1);
+    }
+
+    
+
+    th, td{
+        padding: 12px 20px;
+        text-align: left;
+        width: 33.33%;
+    }
+}
+
+#table-header:hover{
+    background-color:rgba(52, 73, 94, 1);
+}
+
 
 
 

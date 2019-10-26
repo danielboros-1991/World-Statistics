@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css?family=Lalezar|Source+Serif+Pro&display=swap" rel="stylesheet">
+        <script type='text/javascript' src='https://www.gstatic.com/charts/loader.js'></script>
+        <title>World Statistics - Cities</title>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+
+    <body>
+        
+            <div class="page">
+                <nav class="nav-bar">
+                    <ul class="nav-bar__list">
+                        <li class="nav-bar__item--icon">
+                            <svg class="nav-bar__icon">
+                                <use xlink:href="img/sprite.svg#icon-map"></use>
+                            </svg>
+                        </li>
+                        <li class="nav-bar__item">
+                            <a href="index.html" class="nav-bar__link">Maps</a>
+                        </li>
+                        <li class="nav-bar__item">
+                            <a href="#" class="nav-bar__link">Cities</a>
+                        </li>
+                        <li class="nav-bar__item">
+                            <a href="trade.html" class="nav-bar__link" id="test">Countries</a>
+                            <ul class="dropdown">
+                                <li class="dropdown__item">
+                                    <a href="#" class="dropdown__link">Exports</a>
+                                </li>
+                                <li class="dropdown__item">
+                                    <a href="#" class="dropdown__link">Population</a>
+                                </li>
+                                <li class="dropdown__item">
+                                    <a href="#" class="dropdown__link">Area</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-bar__item">
+                            <a href="#" class="nav-bar__link">English</a>
+                        </li>
+                    </ul>
+                </nav>
+                    <main class="main">
+                        <div class="content">
+
+                            <div class="entry">
+                                <h1 class="heading-primary">European Cities</h1>
+                                <p class="entry__description">
+                                        A table with largest cities in Europe.
+                                </p>
+                                <input type="text" class="searchInput" onkeyup="search()" placeholder="Type in City ..." name="Type in City">
+                                
+                                <table class="table">
+                                    <tr id="table-header" class="table__header">
+                                        <th>City</th>
+                                        <th>Country</th>
+                                        <th>Population</th>
+                                    </tr>
+                                    <tr>
+                                        <td>Vienna</td>
+                                        <td>Austria</td>
+                                        <td>1.897.491</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Frankfurt</td>
+                                        <td>Germany</td>
+                                        <td>753.056</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Berlin</td>
+                                        <td>Germany</td>
+                                        <td>3.644.826</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Madrid</td>
+                                        <td>Spain</td>
+                                        <td>3.223.334</td>
+                                    </tr>
+                                    <tr>
+                                        <td>London</td>
+                                        <td>United Kingdom</td>
+                                        <td>8.908.081</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Paris</td>
+                                        <td>France</td>
+                                        <td>2.190.327</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Warsaw</td>
+                                        <td>Poland</td>
+                                        <td>1.764.615</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Stockholm</td>
+                                        <td>Sweden</td>
+                                        <td>949.761</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Copenhagen</td>
+                                        <td>Denmark</td>
+                                        <td>623.404</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Amsterdam</td>
+                                        <td>The Netherlands</td>
+                                        <td>864.217</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Brussels</td>
+                                        <td>Belgium</td>
+                                        <td>1.198.726</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Milan</td>
+                                        <td>Italy</td>
+                                        <td>1.366.180</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Rome</td>
+                                        <td>Italy</td>
+                                        <td>2.872.800</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Munich</td>
+                                        <td>Germany</td>
+                                        <td>1.471.508</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Hamburg</td>
+                                        <td>Germany</td>
+                                        <td>1.841.179</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Cologne</td>
+                                        <td>Germany</td>
+                                        <td>1.085.664</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Naples</td>
+                                        <td>Italy</td>
+                                        <td>966.144</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Prague</td>
+                                        <td>Czechia</td>
+                                        <td>1.308.632</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Budapest</td>
+                                        <td>Hungary</td>
+                                        <td>1.752.286</td>
+                                    </tr>
+                                </table>
+                                
+                                <ul class="entry__references">
+                                    <li class="entry__references__item">
+                                        <a href="#" class="entry__references__link" target="_blank">Wikipedia</a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            
+                            
+
+                             
+
+                            
+                        </div>
+                    </main>
+                </div>
+
+                <script type="text/javascript">
+                    
+                    function search(){
+
+                        var searchInput = document.querySelector(".searchInput");
+                        var row = document.querySelectorAll("tr");
+                        var cities = document.querySelectorAll("td");
+
+                        for(i=1;i<row.length;i++){
+                            row[i].style.display = "none";
+                            for(j=0;j<row[i].cells.length;j++){
+                                if (row[i].cells[j].innerText.toUpperCase().includes(searchInput.value.toUpperCase())){
+                                    row[i].style.display = "table-row";
+                                }
+                            }
+                        }
+
+
+                    }
+                            
+
+
+                    
+                </script>
+
+    </body>
+
+</html>

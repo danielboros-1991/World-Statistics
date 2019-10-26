@@ -3,6 +3,7 @@
 
 .nav-bar {
   position: fixed;
+  height: 75px;
   top: 0;
   left: 0;
   width: 100%;
@@ -12,12 +13,14 @@
   z-index: 1000;
   padding: 0 150px 0 35px; }
   .nav-bar__list {
+    height: 100%;
     list-style: none;
     display: flex;
     justify-content: space-around; }
   .nav-bar__item {
-    padding: 20px;
-    transition: all .2s; }
+    transition: all .2s;
+    display: flex;
+    flex-direction: column; }
     .nav-bar__item--icon {
       display: flex;
       align-items: center;
@@ -26,16 +29,34 @@
       background-color: #19b5fe; }
     .nav-bar__item:hover .nav-bar__link {
       transform: scale(1.2); }
+    .nav-bar__item:hover .dropdown {
+      display: block; }
   .nav-bar__link, .nav-bar__link:link, .nav-bar__link:visited {
+    height: 100%;
     text-decoration: none;
     text-transform: uppercase;
     color: #fff;
     letter-spacing: 1px;
-    display: inline-block; }
+    display: inline-block;
+    padding: 20px; }
   .nav-bar__icon {
     height: 30px;
     width: 30px;
     fill: #fff; }
+
+.dropdown {
+  list-style: none;
+  background-color: #34495e;
+  width: 100%;
+  display: none; }
+  .dropdown__item {
+    padding: 10px; }
+  .dropdown__item:hover {
+    cursor: pointer;
+    background-color: #19b5fe; }
+  .dropdown__link:visited, .dropdown__link:link {
+    text-decoration: none;
+    color: white; }
 
 .main {
   padding: 150px 0;
@@ -100,7 +121,7 @@ body {
       font-size: 12px; }
 
 .heading-primary {
-  margin-bottom: 20px; }
+  margin-bottom: 30px; }
 
 .btn {
   padding: 10px 20px;
@@ -115,7 +136,8 @@ body {
 .flex_container {
   display: flex;
   justify-content: space-evenly;
-  width: 100%; }
+  width: 100%;
+  margin-top: 40px; }
 
 .entry__filter {
   outline: none;
@@ -139,3 +161,31 @@ body {
 .filter__choices {
   display: flex;
   flex-direction: column; }
+
+.searchInput {
+  width: 300px;
+  padding: 10px 20px;
+  margin-bottom: 30px; }
+
+.table {
+  width: 100%;
+  font-size: 20px;
+  border: 1px solid grey;
+  margin-bottom: 30px;
+  border-collapse: collapse; }
+  .table__header {
+    color: white;
+    background-color: #34495e;
+    letter-spacing: 2px; }
+  .table tr {
+    border-bottom: 1px solid grey; }
+  .table tr:hover {
+    color: white;
+    background-color: #19b5fe; }
+  .table th, .table td {
+    padding: 12px 20px;
+    text-align: left;
+    width: 33.33%; }
+
+#table-header:hover {
+  background-color: #34495e; }
