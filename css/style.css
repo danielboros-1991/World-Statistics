@@ -18,6 +18,8 @@
     display: flex;
     justify-content: space-around; }
   .nav-bar__item {
+    width: 150px;
+    text-align: center;
     transition: all .2s;
     display: flex;
     flex-direction: column; }
@@ -189,3 +191,45 @@ body {
 
 #table-header:hover {
   background-color: #34495e; }
+
+.slideshow-container {
+  width: 65%;
+  position: relative;
+  margin: 0 auto; }
+
+.slides {
+  width: 100%; }
+  .slides__number {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 1000;
+    color: white; }
+  .slides__image {
+    width: 100%; }
+  .slides__caption {
+    color: white;
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    text-align: center;
+    font-size: 30px;
+    letter-spacing: 3px; }
+
+.previous, .next {
+  position: absolute;
+  top: 50%;
+  color: white;
+  text-decoration: none;
+  font-size: 30px;
+  width: 30px;
+  text-align: center;
+  cursor: pointer; }
+
+.next {
+  right: 0; }
+
+.country-image {
+  width: 70%;
+  display: block;
+  margin: 0 auto; }

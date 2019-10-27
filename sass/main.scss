@@ -24,7 +24,8 @@
     }
 
     &__item{
-        
+        width: 150px;
+        text-align: center;
         transition: all .2s;
         display: flex;
         flex-direction: column;
@@ -300,6 +301,68 @@ body{
     background-color:rgba(52, 73, 94, 1);
 }
 
+
+// CITY MAIN PAGE SLIDESHOW
+
+.slideshow-container{
+    width: 65%;
+    position: relative;
+    margin: 0 auto;
+}
+
+.slides{
+    
+    width: 100%;
+
+    &__number{
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        z-index: 1000;
+        color: white;
+
+    }
+
+    &__image{
+        
+        width: 100%;
+    }
+
+    &__caption{
+        color: white;
+        position: absolute;
+        bottom: 10px;
+        width: 100%;
+        text-align: center;
+        font-size: 30px;
+        letter-spacing: 3px;
+
+    }
+}
+
+.previous, .next{
+    position: absolute;
+    top: 50%;
+    color: white;
+    text-decoration: none;
+    font-size: 30px;
+    width: 30px;
+    text-align: center;
+    cursor: pointer;
+    
+}
+
+.next{
+    right: 0;
+}
+
+// COUNTRIES MAIN PAGE
+
+.country-image{
+    width: 70%;
+    display: block;
+    margin: 0 auto;
+}
 
 
 
