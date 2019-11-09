@@ -1,16 +1,14 @@
 const express = require("express");
 const app = express();
-const path = require('path');
 
-app.use(express.static("public"));
-app.use(express.static("css"));
-app.use(express.static("img"));
+app.set("view engine", "ejs");
 
 app.get('/', function(req, res) {
-    res.render("index.ejs");
+    res.render("index");
 });
 
-console.log(path.join)
-console.log(path.join(__dirname, 'index.html'))
 
-app.listen(3000);
+
+
+
+app.listen(process.env.PORT, process.env.IP);
