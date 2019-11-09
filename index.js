@@ -8,6 +8,14 @@ app.get('/', function(req, res) {
     res.render("index");
 });
 
+app.get('/cities', function(req, res) {
+    res.render("cities-main");
+});
+
+app.get('/cities/migration', function(req, res) {
+    res.render("cities");
+});
+
 
 
 
