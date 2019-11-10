@@ -40,5 +40,5 @@ app.get('/countries/area', function(req, res) {
     res.render("countries-area");
 });
 
-app.listen(3000);
-// app.listen(process.env.PORT, process.env.IP);
+
+app.listen(process.env.PORT, process.env.IP);
